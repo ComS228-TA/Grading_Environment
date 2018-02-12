@@ -13,7 +13,7 @@ python3                  https://www.python.org/downloads/
     $ git clone https://github.com/ComS228-TA/Grading_Environment.git
     
     //Go into the correct folder
-    $ cd Grading_Environment/GradingScript22800/
+    $ cd Grading_Environment/GradingScript228000/
 
     //Run One Time Setup Script
     $ sh one_time_setup.sh
@@ -25,3 +25,6 @@ python3                  https://www.python.org/downloads/
     $ vi GraderAttributes.json
 
 That should be it!
+
+#### Scripts and how to use them
+**Make sure to be inside the GradingScript228000 directory to run these scripts correctly**
