@@ -2,7 +2,7 @@
 
 This is the grading environment used for grading assignments in Computer Science 228 at Iowa State University
 
-#### Dependencies:
+#### <h2>Dependencies:</h2>
 
 Gradle 4.2.x or higher   https://gradle.org/install/
 <br>
