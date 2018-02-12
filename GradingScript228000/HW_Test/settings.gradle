@@ -1,0 +1,2 @@
+include ':HW_Student'
+project(':HW_Student').projectDir = new File("../HW_Student")

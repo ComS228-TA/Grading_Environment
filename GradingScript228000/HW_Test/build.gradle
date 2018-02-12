@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+dependencies {
+  compile project(':HW_Student')
+  compile "junit:junit:4+"
+}
+
+repositories {
+ mavenCentral()
+}
+
+task(testStudentCode, dependsOn: 'classes', type: JavaExec) {
+    outputs.upToDateWhen { false }
+    main = 'edu.iastate.cs228.' + assignment + '.grading.AutomatedJUnitRunner'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+defaultTasks 'testStudentCode'
