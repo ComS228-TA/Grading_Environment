@@ -51,8 +51,8 @@ Runs Gradle eclipse in the HW_Student project so that the project can be open in
 <br>
 Arguments: &lt;assignment name&gt; Needs to be HWX, where X is the assignment number
 #### Example:
-    //To run the test script on the following students code
-    $ sh run_next_student.sh
+    //To run the test script on the following students code in assignment 1
+    $ sh run_next_student.sh HW1
 #### <h3>run_rest_of_students:</h3>
 Similar to run_next_student: places the following student code in HW_Student, runs gradle in HW_Test, saves output in student grading file. However will continue on and do the same for all the other students left to grade. Will stop if a student has an error in their code such as compilation error or an infinite loop. If error occurs, simply open in Eclipse, fix the error and run again. It will not swap code in HW_Student if there was a previous error. Can still be used if you ran  run_next_student before.
 <br>
@@ -60,5 +60,5 @@ Similar to run_next_student: places the following student code in HW_Student, ru
 Arguments: &lt;assignment name&gt; Needs to be HWX, where X is the assignment number
 #### Example:
     //To run the rest of the students code with the test script for assignment 1
-    sh run_rest_of_students.sh
+    sh run_rest_of_students.sh HW1
 #### <h2>If there are any questions, feel free to contact me, Jason Ramirez, at <a href="mailto:jp51371@iastate.edu">jp51371@iastate.edu</a></h2> 
