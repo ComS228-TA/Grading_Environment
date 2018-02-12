@@ -5,6 +5,7 @@ This is the grading environment used for grading assignments in Computer Science
 #### Dependencies
 
 Gradle 4.2.x or higher   https://gradle.org/install/
+<br>
 python3                  https://www.python.org/downloads/
 
 #### Setup        
