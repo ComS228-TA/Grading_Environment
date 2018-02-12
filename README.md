@@ -8,4 +8,20 @@ Gradle 4.2.x or higher   https://gradle.org/install/
 <br>
 python3                  https://www.python.org/downloads/
 
-#### Setup        
+#### Setup
+    //Clone Repository
+    $ git clone https://github.com/ComS228-TA/Grading_Environment.git
+    
+    //Go into the correct folder
+    $ cd Grading_Environment/GradingScript22800/
+
+    //Run One Time Setup Script
+    $ sh one_time_setup.sh
+
+    //Go into JSON Attributes folder
+    $ cd json_attributes
+
+    //Inside GraderAttributes.json, fill in the TODOs
+    $ vi GraderAttributes.json
+
+That should be it!
