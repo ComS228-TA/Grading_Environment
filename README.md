@@ -2,13 +2,13 @@
 
 This is the grading environment used for grading assignments in Computer Science 228 at Iowa State University
 
-#### Dependencies
+#### Dependencies:
 
 Gradle 4.2.x or higher   https://gradle.org/install/
 <br>
 python3                  https://www.python.org/downloads/
 
-#### Setup
+#### Setup:
     //Clone Repository
     $ git clone https://github.com/ComS228-TA/Grading_Environment.git
     
@@ -26,5 +26,13 @@ python3                  https://www.python.org/downloads/
 
 That should be it!
 
-#### Scripts and how to use them
+#### Scripts and how to use them:
 **Make sure to be inside the GradingScript228000 directory to run these scripts correctly**
+<br>
+setup_assignment:
+<br>
+Creates the folders necessary to start grading a new assignment. Arguements: <assignment name> Needs to be HWX, where X is the assignment number
+<br>
+Example:
+    //To create folders for assignment 1
+    $ sh setup_assignment.sh HW1
