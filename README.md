@@ -27,12 +27,12 @@ python3                  https://www.python.org/downloads/
 That should be it!
 
 #### <h2>Scripts and how to use them:</h2>
-<span style="color:red">**Make sure to be inside the GradingScript228000 directory to run these scripts correctly**</span>
+<span style="color:red">*Make sure to be inside the GradingScript228000 directory to run these scripts correctly*</span>
 <br>
 setup_assignment:
 <br>
 Creates the folders necessary to start grading a new assignment. Arguements: <assignment name> Needs to be HWX, where X is the assignment number
 <br>
-Example:
+#### Example:
     //To create folders for assignment 1
     $ sh setup_assignment.sh HW1
