@@ -2,6 +2,8 @@ import os
 import sys
 from FileManipulation import setupFile, readFirstLine, replaceStringsInFile, saveFirstLine
 
+#Locates where in the file it should copy from
+#Returns starting and ending lines
 def findStartAndEndTestOutput(filename, startString, endString):
     start = -1
     end = -1
@@ -16,9 +18,12 @@ def findStartAndEndTestOutput(filename, startString, endString):
 
     return start, end
 
+#Creates the string for the correct file location to place the gradle output to
 def createStudentTemplateFileName(student, assignment):
     return assignment + '_Submissions_unzipped/' + student + '/' + student + '.txt'
 
+#Takes a file and copies all the contents from the start line of a file
+#till the end line. Then returns as a string
 def starEndFileToString(filename, start, end):
     stringList = list()
 
@@ -31,7 +36,10 @@ def starEndFileToString(filename, start, end):
 
     return '\n'.join(stringList)
 
-
+#Program to take data from output.txt after having run gradle and place it
+#into the students grading file
+#Will also fail if there is no output, if failure is detected, sets the
+#updateFile to False as to not update the next iteration when calling run_next_student
 def main(assignment):
     outputFileName = 'counters/output.txt'
     updateFileName = 'counters/shouldUpdate.txt'

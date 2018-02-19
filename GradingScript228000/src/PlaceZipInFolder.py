@@ -8,6 +8,7 @@ from datetime import datetime
 from FileManipulation import replaceStringsInFile, makeDirectory
 from PlaceFilesInCorrectLoc import placeFilesInCorrectLoc
 
+#Extracts the students zip folder and moves it into HWX_Submissions_Unzipped
 def extractAndCopyFiles(filename, zipFileDir, templateName, students, folderWhereSrcShouldBe):
     student = filename.replace('.zip', '')
     if student not in students:
@@ -22,6 +23,7 @@ def extractAndCopyFiles(filename, zipFileDir, templateName, students, folderWher
     copy2(templateName, studentDir + '/' + student + '.txt')
     return placeFilesInCorrectLoc(studentDir, folderWhereSrcShouldBe), studentDir, student
 
+#Edits the grading template with the graders specific attributes
 def setupGradingTemplateWithGraderAttributes(jsonFileName, templateName):
     toBeReplaced = list()
     replacors = list()
@@ -34,6 +36,8 @@ def setupGradingTemplateWithGraderAttributes(jsonFileName, templateName):
 
     replaceStringsInFile(templateName, toBeReplaced, replacors)
 
+#Program to Unzip student files, place them in HWX_Submissions_Unzipped and then
+#add the template to each student folder
 def main(assignment):
     students = {}
     zipFileDir = assignment + '_Submissions'

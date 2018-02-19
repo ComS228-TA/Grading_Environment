@@ -2,7 +2,10 @@ import os
 from shutil import copytree
 from FileManipulation import makeDirectory
 
-def doesDirContainCode(folder):
+#Checks to see if a folder has the java code
+#Makes sure that it does not include Test.java because student may place
+#Test code in a different folder than where the actual code is at
+def doesFolderContainCode(folder):
     try:
         print(folder)
         for file in os.listdir(os.fsencode(folder)):
@@ -14,13 +17,14 @@ def doesDirContainCode(folder):
     except OSError as e:
         return False
 
-def placeFilesInCorrectLoc(studentDir, folderWhereSrcShouldBe):
-    inCorrectPlace = doesDirContainCode("./" + studentDir + "/" + folderWhereSrcShouldBe)
+#Gets a student directory and places all the code into folderWhereSrcShouldBe
+def placeFilesInCorrectLoc(studentFolder, folderWhereSrcShouldBe):
+    inCorrectPlace = doesDirContainCode("./" + studentFolder + "/" + folderWhereSrcShouldBe)
     if inCorrectPlace:
         return True
 
-    for root, dirs, files in os.walk("./" + studentDir):
-        if doesDirContainCode(root):
+    for root, dirs, files in os.walk("./" + studentFolder):
+        if doesFolderContainCode(root):
             copytree(root, './' + studentDir + "/" + folderWhereSrcShouldBe)
             return True
     return False

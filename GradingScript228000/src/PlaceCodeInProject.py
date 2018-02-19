@@ -8,6 +8,9 @@ from FileManipulation import setupFile, replaceStringsInFile, addMethods, saveFi
 REPLACEMENTS_JSON_FILENAME = 'json_attributes/replacements.json'
 EXTRA_METHODS = 'json_attributes/extraMethods.json'
 
+#Modifies files when placing into HW_Student project.
+#Will Replace code (either changing access modifiers)
+#Will Add methods if methods need to be added
 def modifyFiles(directory):
     with open(REPLACEMENTS_JSON_FILENAME) as data_file:
         data = json.load(data_file)
@@ -25,6 +28,8 @@ def modifyFiles(directory):
             addMethods(classFile, methodsToAdd)
         data_file.close()
 
+#Will get the list of students the way the OS retrieves names
+#TODO Should probably change this to be alphabetical
 def getListOfStudents(studentsDir):
     students = list()
     for file in os.listdir(os.fsencode(studentsDir)):
@@ -33,6 +38,7 @@ def getListOfStudents(studentsDir):
             students.append(fileName)
     return students
 
+#Will choose the next student to have their code placed in HW_Student project
 def getNextStudent(studentsDir, currentStudentFile, lastStudentFile):
     currentStudent = readFirstLine(currentStudentFile)
     allStudents = getListOfStudents(studentsDir)
@@ -47,6 +53,8 @@ def getNextStudent(studentsDir, currentStudentFile, lastStudentFile):
         getNext = currentStudent == student
     return None
 
+#Setup file names and folders to be used
+#Grabs file in counter if students should be updated or not
 def setup(assignment):
     currentStudentFile = 'counters/student_counter.txt'
     updateFileName = "counters/shouldUpdate.txt"
@@ -57,6 +65,8 @@ def setup(assignment):
     shouldUpdate = readFirstLine(updateFileName)
     return currentStudentFile, studentsDir, studentToTest, shouldUpdate
 
+#Program to place the following students code in HW_Student
+#Will not update if counters/shouldUpdate.txt is False
 def main(assignment):
     currentStudentFile, studentsDir, studentToTest, shouldUpdate = setup(assignment)
     if shouldUpdate and shouldUpdate == 'False':

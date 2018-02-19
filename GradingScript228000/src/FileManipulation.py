@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+#Adds methods to a specific file in Java
 def addMethods(filename, methods):
     replacedFileList = list()
     firstTime = True
@@ -19,6 +20,7 @@ def addMethods(filename, methods):
             fout.write(line)
         fout.close()
 
+#Creates a directory if it does not exist already
 def makeDirectory(directory):
     try:
         if not os.path.exists(directory):
@@ -27,12 +29,15 @@ def makeDirectory(directory):
         if e.errno != errno.EEXIST:
             raise
 
+#Reads the first line of a file and returns it if not empty, otherwise None
 def readFirstLine(fileName):
     f = open(fileName, 'r')
     line = f.read()
     f.close()
     return line if line.strip() else None
 
+#Finds all the places in a file where the string toBeReplaced is
+#and replaces it with toBeReplaced
 def replaceStringsInFile(filename, toBeReplaced, replacors):
     if not len(toBeReplaced) == len(replacors):
         raise ValueError("toBeReplaced Array and replacors Array are not the same size")
@@ -52,6 +57,8 @@ def replaceStringsInFile(filename, toBeReplaced, replacors):
             fout.write(line)
         fout.close()
 
+#Saves the string toSave in a file if toSave is not None
+#Otherwise saves an empty file
 def saveFirstLine(fileName, toSave):
     f = open(fileName, 'w')
     if not toSave:
@@ -60,6 +67,8 @@ def saveFirstLine(fileName, toSave):
         f.write(toSave);
     f.close()
 
+#Creates a file based on the fileName
+#If the file already exists, nothing happens
 def setupFile(fileName):
     myFile = Path(fileName)
     if myFile.is_file():
