@@ -14,6 +14,10 @@ python3
 https://www.python.org/downloads/
 <br>
 <br>
+(Windows) Anaconda
+https://www.anaconda.com/download/
+<br>
+<br>
 (Windows) A terminal that can run Bash Scripts, like Git BASH
 <br> https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.4/Git-2.16.1.4-32-bit.exe
 
