@@ -54,7 +54,7 @@ Arguments: &lt;assignment name&gt; Needs to be HWX, where X is the assignment nu
     //To unzip submissions and check for errors in assignment 1
     $ sh setup_student_files.sh HW1
 #### <h3>run_next_student:</h3>
-Before running, manually placing the testing code in HW_Test/src/main/java/edu/iastate/cs228/hwX. If there are extra files that need to be read, they can be placed in HW_Test/
+Before running, manually place the testing code in HW_Test/src/main/java/edu/iastate/cs228/hwX. If there are extra files that need to be read by the tests (like txt files), they can be placed in HW_Test/
 <br>
 <br>
 The script will insert the following students code into the HW_Student project. Runs gradle in the HW_Test project and places the output in the students grading file.
