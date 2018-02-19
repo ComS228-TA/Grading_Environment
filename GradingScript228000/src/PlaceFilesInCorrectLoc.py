@@ -19,7 +19,7 @@ def doesFolderContainCode(folder):
 
 #Gets a student directory and places all the code into folderWhereSrcShouldBe
 def placeFilesInCorrectLoc(studentFolder, folderWhereSrcShouldBe):
-    inCorrectPlace = doesDirContainCode("./" + studentFolder + "/" + folderWhereSrcShouldBe)
+    inCorrectPlace = doesFolderContainCode("./" + studentFolder + "/" + folderWhereSrcShouldBe)
     if inCorrectPlace:
         return True
 
