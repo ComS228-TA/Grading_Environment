@@ -7,11 +7,17 @@ This is the grading environment used for grading assignments in Computer Science
 Gradle 4.2.x or higher   https://gradle.org/install/
 <br>
 python3                  https://www.python.org/downloads/
+<br>
+(Windows) A terminal     https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.4/Git-2.16.1.4-32-bit.exe
+<br>
+that can run
+<br>
+Bash Scripts
 
 #### <h2>Setup:</h2>
     //Clone Repository
     $ git clone https://github.com/ComS228-TA/Grading_Environment.git
-    
+
     //Go into the correct folder
     $ cd Grading_Environment/GradingScript228000/
 
@@ -29,7 +35,7 @@ That should be it!
 #### <h2>Scripts and how to use them:</h2>
 **Make sure to be inside the GradingScript228000 directory to run these scripts correctly**
 #### <h3>setup_assignment:</h3>
-Creates the folders necessary to start grading a new assignment. 
+Creates the folders necessary to start grading a new assignment.
 <br>
 <br>
 Arguments: &lt;assignment name&gt; Needs to be HWX, where X is the assignment number
@@ -61,4 +67,4 @@ Arguments: &lt;assignment name&gt; Needs to be HWX, where X is the assignment nu
 #### Example:
     //To run the rest of the students code with the test script for assignment 1
     sh run_rest_of_students.sh HW1
-#### <h2>If there are any questions, feel free to contact me, Jason Ramirez, at <a href="mailto:jp51371@iastate.edu">jp51371@iastate.edu</a></h2> 
+#### <h2>If there are any questions, feel free to contact me, Jason Ramirez, at <a href="mailto:jp51371@iastate.edu">jp51371@iastate.edu</a></h2>
