@@ -4,15 +4,16 @@ This is the grading environment used for grading assignments in Computer Science
 
 #### <h2>Dependencies:</h2>
 
-Gradle 4.2.x or higher   https://gradle.org/install/
+Gradle 4.2.x or higher
 <br>
-python3                  https://www.python.org/downloads/
+https://gradle.org/install/
 <br>
-(Windows) A terminal     https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.4/Git-2.16.1.4-32-bit.exe
+python3
 <br>
-that can run
+https://www.python.org/downloads/
 <br>
-Bash Scripts
+(Windows) A terminal that can run Bash Scripts, like Git BASH
+<br> https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.4/Git-2.16.1.4-32-bit.exe
 
 #### <h2>Setup:</h2>
     //Clone Repository
