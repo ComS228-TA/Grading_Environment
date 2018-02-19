@@ -25,6 +25,6 @@ def placeFilesInCorrectLoc(studentFolder, folderWhereSrcShouldBe):
 
     for root, dirs, files in os.walk("./" + studentFolder):
         if doesFolderContainCode(root):
-            copytree(root, './' + studentDir + "/" + folderWhereSrcShouldBe)
+            copytree(root, './' + studentFolder + "/" + folderWhereSrcShouldBe)
             return True
     return False
