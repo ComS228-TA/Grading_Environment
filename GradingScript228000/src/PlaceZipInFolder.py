@@ -38,6 +38,7 @@ def setupGradingTemplateWithGraderAttributes(jsonFileName, templateName):
 
 #Program to Unzip student files, place them in HWX_Submissions_Unzipped and then
 #add the template to each student folder
+#If there are errors with the student zip files, will place in error folders
 def main(assignment):
     students = {}
     zipFileDir = assignment + '_Submissions'
