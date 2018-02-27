@@ -2,7 +2,9 @@
 assignment=$1
 lowercase="$(echo $assignment | tr '[A-Z]' '[a-z]')"
 
-OUTPUT=$(python3 ./src/replace_template.py $assignment)
+OUTPUT=$(python3 ./src/ReplaceTemplate.py $assignment)
+
+echo $OUTPUT
 
 cd ../HW_Test
 
